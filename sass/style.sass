@@ -45,6 +45,12 @@ body
     right: -30px
     top: -80px
     z-index: 0
+  &_middle
+    width: 388px
+    height: 388px
+    top: 2759px
+    right: 162px
+    z-index: 0
 .container
   display: grid
   grid-template-columns: 1.5fr 4fr 2fr
@@ -109,7 +115,6 @@ body
   &-text
     grid-area: header-text
     position: relative
-    // align-self: start
     max-width: 650px
     display: grid
     grid-row-gap: 70px
@@ -171,5 +176,80 @@ body
     align-self: center
   &__text
     align-self: start
-
+.services
+  display: grid
+  grid-template-rows: 1fr 3.5fr
+  &-text
+    display: grid
+    grid-template-columns: 2fr 6fr 2fr
+    grid-template-rows: 1fr 1fr
+    grid-row-gap: 50px
+    justify-content: center
+    &__title
+      color: $text-color
+      font-size: 55px
+      grid-column: 2/3
+      grid-row: 1/2
+  &-thumbs
+    display: grid
+    grid-template-columns: repeat(5, auto)
+    justify-content: start
+    grid-column: 2/3
+    grid-row: 2/3
+    &__link
+      font-size: 18px
+      font-weight: 700
+      text-transform: uppercase
+      text-decoration: none
+      color: $text-color
+      margin-right: 30px
+  &__img 
+    display: grid
+    justify-content: end
+    position: relative
+    img
+      max-width: 800px
+  &-about
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-column-gap: 130px
+    &__text
+      display: grid
+      grid-row-gap: 60px
+      margin-top: 70px
+      align-self: start
+      .arrows
+        margin-top: 40px
+    &__title
+      font-size: 50px
+      font-weight: 500
+    &__advantages
+      list-style: none
+      font-size: 22px
+      font-weight: 300
+      line-height: 2
+      padding-left: 0
+      & li
+        position: relative
+        padding-left: 43px
+        &::before
+          content: ''
+          position: absolute
+          top: 30%
+          left: 0
+          width: 30px
+          height: 30px
+          display: inline-block
+          background: url(../img/checked.png) no-repeat
+  &-buttons
+    &__link
+      margin-left: 39px
+      font-weight: 700
+      &:after
+        content: ''
+        display: block
+        width: 100%
+        height: 1px
+        background-color: rgba($button-bg, 0.7)
+    
 @import 'media'

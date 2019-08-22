@@ -14,6 +14,22 @@
       justify-self: end
     &-text
       grid-row: 3/4
+  .services
+    &-buttons
+      display: flex
+      flex-direction: column
+      align-items: start
+      &__link
+        display: inline-block
+        margin-top: 30px
+        margin-left: 20px
+    &__img
+      img
+        max-width: 700px
+    &-about
+      grid-column-gap: 100px
+      &__text
+        grid-row-gap: 20px
 @media (max-width: 1200px)
   .container
     grid-template-columns: 1fr 8fr 1fr
@@ -37,6 +53,24 @@
   .thumbs
     grid-template-columns: repeat(3, auto)
     grid-row-gap: 10px
+  .services
+    &-text
+      &__title
+        font-size: 40px
+    &-thumbs
+      &__link
+        font-size: 16px
+    &__img
+      img
+        max-width: 600px
+    &-about
+      grid-column-gap: 80px
+      &__text
+        grid-row-gap: 20px
+      &__title
+        font-size: 40px
+      &__advantages
+        font-size: 18px
 @media (max-width: 1050px)
   .thumbs
     grid-template-columns: repeat(2, auto)
@@ -44,6 +78,16 @@
     justify-content: start
   .about-row
     grid-template-columns: repeat(auto-fill, minmax(50%, max-content))
+  .circle
+    &_middle
+      top: 3000px
+      right: 100px
+  .services
+    &__img
+      img
+        max-width: 500px
+    &-about
+      grid-column-gap: 70px
 @media (max-width: 900px)   
   .header
     &-buttons
@@ -54,6 +98,13 @@
         display: inline-block
         margin-top: 30px
         margin-left: 20px
+  .services
+    &__img
+      align-self: center
+      img
+        max-width: 400px
+    &-about
+      grid-column-gap: 30px
 @media (max-width: 768px)
   .header
     font-size: 16px
@@ -64,6 +115,50 @@
       grid-gap: 10px
     &-img
       width: 400px
+  .services
+    &-text
+      grid-template-columns: 1fr 6fr 1fr
+      &__title
+        font-size: 35px
+    &-thumbs
+      grid-template-columns: repeat(4, auto)
+      grid-row-gap: 20px
+    &__img
+      align-self: center
+      img
+        max-width: 350px
+    &-about
+      grid-column-gap: 40px
+      &__title
+        font-size: 35px
+      &__advantages
+        font-size: 16px
+@media (max-width: 725px)
+  .services
+    &-text__title
+      font-size: 30px
+    &-thumbs__link
+      font-size: 14px
+    &-about
+      grid-template-columns: 1fr 6fr 1fr
+      grid-gap: 0
+      &__title
+        font-size: 30px
+      &__text
+        grid-column: 2/3
+        display: grid
+        grid-template-columns: 1fr 2fr
+        grid-column-gap: 40px
+      &__advantages
+        grid-column: 1/2
+        grid-row: 2/3
+    &-buttons
+      grid-column: 2/3
+      grid-row: 2/3
+    .arrows
+      display: none
+    &__img
+      display: none
 @media (max-width: 660px)
   .container
     grid-template-columns: repeat(auto)
@@ -81,6 +176,10 @@
       font-size: 18px
   .about-row
     grid-template-columns: repeat(auto-fill, minmax(100%, max-content))
+  .circle
+    &_middle
+      top: 3500px
+      right: 50px
 @media (max-width: 550px)
   .header
     &-img
